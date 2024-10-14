@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+   
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #9d9696;
+    padding: 15px;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(15, 14, 14);
+    text-decoration: none;
+}
+
+.hero {
+    background: url('hero2.webp') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(9, 7, 7);
+    text-align: center;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.character img {
+    max-width: 100%; /* Ensures images scale down with their container */
+    height: auto; /* Keeps the aspect ratio intact */
+}
+
+.carousel-section {
+    position: relative;
+    padding: 20px;
+}
+
+.carousel-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snapping */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.carousel-slide {
+    display: flex;
+    scroll-snap-align: start; /* Aligns the start of each item */
+}
+
+.manhwa-item {
+    min-width: 200px; /* Set a minimum width for each item */
+    margin-right: 20px; /* Space between items */
+    scroll-snap-align: start; /* Snap to the start of the item */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px; /* Position for left button */
+}
+
+.next {
+    right: 10px; /* Position for right button */
+}
+
+.cta-button {
+    background: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
